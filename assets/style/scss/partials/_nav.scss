@@ -1,0 +1,31 @@
+@use 'colors';
+
+.nav-menu {
+	position: absolute;
+	background-color: transparent;
+	right: 0%;
+	top: 0%;
+	transition: all 0.5s ease-in-out;
+	.nav-link {
+		display: block;
+		width: auto;
+		margin: 3.5rem;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: transparent;
+		transform: translateX(2rem);
+		transition: all 0.5s ease-in-out;
+		font-size: 2.2rem;
+		font-weight: 900;
+	}
+}
+.nav-menu.open {
+	background-color: rgba($color: #000000, $alpha: 0.7);
+	.nav-link {
+		color: colors.$gold;
+		transform: translateX(0);
+	}
+	.nav-link:hover {
+		text-decoration: underline;
+	}
+}

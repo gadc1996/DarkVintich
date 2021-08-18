@@ -1,0 +1,54 @@
+@use 'colors';
+
+$menu-line-rotation: 35px;
+$menu-line-separation: 25px;
+
+@mixin menu-line() {
+	width: 6rem;
+	height: 0.8rem;
+	background: rgb(255, 250, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 250, 0, 1) 0%,
+		rgba(255, 250, 0, 1) 75%,
+		rgba(0, 0, 0, 0) 75%,
+		rgba(0, 0, 0, 0) 85%,
+		rgba(255, 250, 0, 1) 85%
+	);
+	border-radius: 2px;
+	transition: all 0.5s ease-in-out;
+}
+
+.burger-menu {
+	position: absolute;
+	top: 7%;
+	right: 2%;
+	cursor: pointer;
+	z-index: 100;
+	@include menu-line;
+}
+.burger-menu::before,
+.burger-menu::after {
+	@include menu-line;
+	content: "";
+	position: absolute;
+}
+
+.burger-menu::before {
+	transform: translateY(-$menu-line-separation);
+}
+.burger-menu::after {
+	transform: translateY($menu-line-separation);
+}
+.burger-menu.open {
+	transform: translateX(-50px);
+	background: transparent;
+}
+.burger-menu.open::before {
+	transform: rotate(45deg) translate(35px, -35px);
+	background-color: colors.$gold;
+}
+.burger-menu.open::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+	background-color: colors.$gold;
+}

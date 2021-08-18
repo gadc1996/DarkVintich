@@ -1,0 +1,127 @@
+body {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  border: 3rem solid black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../images/background.jpg");
+}
+
+.nav-menu {
+  position: absolute;
+  background-color: transparent;
+  right: 0%;
+  top: 0%;
+  transition: all 0.5s ease-in-out;
+}
+.nav-menu .nav-link {
+  display: block;
+  width: auto;
+  margin: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: transparent;
+  transform: translateX(2rem);
+  transition: all 0.5s ease-in-out;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.nav-menu.open {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.nav-menu.open .nav-link {
+  color: gold;
+  transform: translateX(0);
+}
+.nav-menu.open .nav-link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  background-color: black;
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 7%;
+  right: 2%;
+  cursor: pointer;
+  z-index: 100;
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+}
+
+.burger-menu::before {
+  transform: translateY(-25px);
+}
+
+.burger-menu::after {
+  transform: translateY(25px);
+}
+
+.burger-menu.open {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.burger-menu.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: gold;
+}
+
+.burger-menu.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: gold;
+}
+
+footer {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+}
+footer .footer-text {
+  font-size: 1rem;
+  color: gold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=index.css.map */

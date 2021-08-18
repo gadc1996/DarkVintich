@@ -1,0 +1,46 @@
+@use 'colors';
+
+.info {
+	width: 50vw;
+	height: 100vh;
+	text-align: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	.title {
+		display: block;
+		width: 100%;
+		color: colors.$gold;
+		font-size: 3rem;
+		text-transform: uppercase;
+		margin: 4rem 0;
+	}
+	.info-text {
+		font-size: 1.5rem;
+		line-height: 3rem;
+		text-transform: capitalize;
+	}
+	.email,
+	.phone {
+		text-decoration: none;
+		color: white;
+		display: block;
+		margin: 3rem 0;
+		font-size: 2rem;
+	}
+	.email:hover,
+	.phone:hover {
+		text-decoration: underline;
+		color: colors.$gold;
+	}
+
+	.social {
+		.social-link {
+			color: colors.$gold;
+			font-size: 3rem;
+			.social-logo {
+				margin: 0 1rem;
+			}
+		}
+	}
+}

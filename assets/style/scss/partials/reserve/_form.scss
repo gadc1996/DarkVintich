@@ -1,0 +1,46 @@
+@use '../colors';
+
+.form {
+	width: 50vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	.title {
+		font-size: 2.5rem;
+		color: colors.$gold;
+	}
+	.form-field {
+		display: flex;
+		justify-content: space-between;
+		margin: 1rem;
+		text-align: left;
+		width: 70%;
+		.label {
+			color: white;
+			width: 30%;
+		}
+		.input {
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid white;
+			width: 60%;
+			color: white;
+		}
+		.input:focus {
+			outline: none;
+		}
+	}
+	.submit {
+		color: colors.$gold;
+		width: 80%;
+		background-color: transparent;
+		border: none;
+		font-size: 1rem;
+		margin-top: 2rem;
+	}
+	.submit:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}

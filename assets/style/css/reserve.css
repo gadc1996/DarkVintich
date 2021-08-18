@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: black;
+}
+
+.form {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.form .title {
+  font-size: 2.5rem;
+  color: gold;
+}
+.form .form-field {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  text-align: left;
+  width: 70%;
+}
+.form .form-field .label {
+  color: white;
+  width: 30%;
+}
+.form .form-field .input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  width: 60%;
+  color: white;
+}
+.form .form-field .input:focus {
+  outline: none;
+}
+.form .submit {
+  color: gold;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.form .submit:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.image {
+  width: 50vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=reserve.css.map */
