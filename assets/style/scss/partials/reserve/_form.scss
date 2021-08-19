@@ -1,31 +1,30 @@
 @use '../colors';
+@use '../mixings';
 
 .form {
 	width: 50vw;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	.title {
-		font-size: 2.5rem;
-		color: colors.$gold;
+		@include mixings.title;
 	}
 	.form-field {
 		display: flex;
 		justify-content: space-between;
-		margin: 1rem;
+		margin: 1.2rem;
 		text-align: left;
 		width: 70%;
 		.label {
-			color: white;
+			@include mixings.form-text;
 			width: 30%;
 		}
 		.input {
+			@include mixings.form-text;
 			border: none;
 			background-color: transparent;
 			border-bottom: 1px solid white;
-			width: 60%;
-			color: white;
+			width: 70%;
 		}
 		.input:focus {
 			outline: none;
@@ -33,11 +32,11 @@
 	}
 	.submit {
 		color: colors.$gold;
-		width: 80%;
 		background-color: transparent;
 		border: none;
-		font-size: 1rem;
+		font-size: 1.5rem;
 		margin-top: 2rem;
+		font-weight: 600;
 	}
 	.submit:hover {
 		cursor: pointer;
