@@ -19,7 +19,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../images/background.jpg");
+  background-image: url("../../images/index/background.jpg");
 }
 
 .nav-menu {
@@ -54,7 +54,10 @@ body {
 }
 
 .logo {
-  background-color: black;
+  background-image: url("../../images/index/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 30%;
   height: 50%;
   position: absolute;
@@ -121,7 +124,7 @@ footer .footer-text {
   color: gold;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+@use '../colors';
+
+footer {
+	position: absolute;
+	bottom: 25px;
+	width: 100%;
+	.footer-text {
+		font-size: 1rem;
+		color: colors.$gold;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+	}
+}

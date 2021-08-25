@@ -1,0 +1,97 @@
+body {
+  background-color: black;
+  padding: 0 15vw;
+  overflow: hidden;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  color: gold;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 8rem 0 4rem 0;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.catalogs {
+  height: 60vh;
+  position: absolute;
+  bottom: 0;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+.catalogs .catalog {
+  position: relative;
+  width: 50%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid black;
+  cursor: pointer;
+  padding-top: 3rem;
+}
+.catalogs .catalog .catalog-info {
+  background-color: black;
+  height: 10%;
+  width: 70%;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  padding-top: 1.5rem;
+}
+.catalogs .catalog .catalog-info .catalog-title {
+  color: gold;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  position: relative;
+  bottom: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.catalogs .catalog .category {
+  opacity: 0%;
+  position: relative;
+  transform: translateX(3rem);
+  transition: all 2s ease-in-out;
+}
+.catalogs .catalog .category .category-title {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+.catalogs .catalog .category .category-items {
+  margin: 0 2rem;
+}
+.catalogs .catalog .category .category-items .item {
+  list-style: none;
+  text-align: left;
+}
+.catalogs #platillos {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../images/local/platillos.jpg");
+}
+.catalogs #bebidas {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../images/local/bebidas.jpeg");
+}
+.catalogs .catalog.open .catalog-info {
+  height: 100%;
+  bottom: 0;
+}
+.catalogs .catalog.open .category {
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 500;
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+/*# sourceMappingURL=local.css.map */

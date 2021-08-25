@@ -8,6 +8,8 @@
 	align-items: center;
 	.title {
 		@include mixings.title;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
 	}
 	.form-field {
 		display: flex;
