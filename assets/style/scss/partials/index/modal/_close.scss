@@ -1,0 +1,36 @@
+@use '../../colors';
+@use '../../mixings';
+@use '../../variables';
+
+.modal-close {
+	@include mixings.menu-line;
+	display: none;
+	position: absolute;
+	top: 5%;
+	right: 2%;
+	background: transparent;
+	cursor: pointer;
+}
+.modal-close::before,
+.modal-close::after {
+	@include mixings.menu-line;
+	content: "";
+	position: absolute;
+	background-color: colors.$gold;
+	cursor: pointer;
+}
+.modal-close::before {
+	transform: translateY(-(variables.$menu-line-separation));
+}
+.modal-close::after {
+	transform: translateY(variables.$menu-line-separation);
+}
+.modal-close::before {
+	transform: rotate(45deg);
+}
+.modal-close::after {
+	transform: rotate(-45deg);
+}
+.modal-close.visible {
+	display: block;
+}

@@ -1,7 +1,11 @@
+@use 'partials/nav';
+@use 'partials/burger-menu';
 @use 'partials/index/base';
 @use 'partials/index/index-body';
 @use 'partials/index/background-image';
-@use 'partials/index/nav';
 @use 'partials/index/logo';
-@use 'partials/index/burger-menu';
 @use 'partials/index/footer';
+@use 'partials/index/modal/_toggle.scss';
+@use 'partials/index/modal/_events.scss';
+@use 'partials/index/modal/_close.scss';
+@use 'partials/index/modal/_slider.scss';

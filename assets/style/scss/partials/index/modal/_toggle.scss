@@ -1,0 +1,22 @@
+@use '../../colors';
+
+.modal-toggle {
+	position: absolute;
+	top: 60%;
+	right: 0%;
+	width: 20%;
+	height: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: transparent;
+	background-color: white;
+	transition: all 0.25s ease-in-out;
+}
+
+.modal-toggle:hover {
+	background-color: black;
+	color: colors.$gold;
+	cursor: pointer;
+}

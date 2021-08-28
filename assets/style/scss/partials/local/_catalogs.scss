@@ -8,6 +8,7 @@
 	display: flex;
 	justify-content: center;
 	.catalog {
+		z-index: -1;
 		position: relative;
 		width: 50%;
 		background-color: gray;

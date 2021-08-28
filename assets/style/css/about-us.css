@@ -1,3 +1,90 @@
+.nav-menu {
+  position: absolute;
+  background-color: transparent;
+  right: 0%;
+  top: 0%;
+  transition: all 0.5s ease-in-out;
+}
+.nav-menu .nav-link {
+  display: block;
+  width: auto;
+  margin: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: transparent;
+  transform: translateX(2rem);
+  transition: all 0.5s ease-in-out;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.nav-menu.open {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.nav-menu.open .nav-link {
+  color: gold;
+  transform: translateX(0);
+}
+.nav-menu.open .nav-link:hover {
+  text-decoration: underline;
+}
+
+.menu-area {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  height: 4rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-area .burger-menu {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+}
+
+.burger-menu::before {
+  transform: translateY(-25px);
+}
+
+.burger-menu::after {
+  transform: translateY(25px);
+}
+
+.burger-menu.open {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.burger-menu.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: gold;
+}
+
+.burger-menu.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: gold;
+}
+
 body {
   position: relative;
   box-sizing: border-box;

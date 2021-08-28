@@ -1,0 +1,80 @@
+@use '../../colors';
+@use '../../mixings';
+@use '../../variables';
+
+.slider {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	.control-area {
+		height: 6%;
+		width: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		.slider-control {
+			@include mixings.menu-line;
+			background: transparent;
+			display: none;
+		}
+		.slider-control.visible {
+			display: block;
+		}
+	}
+
+	#left,
+	#right {
+		position: absolute;
+	}
+	#left {
+		left: -15%;
+		top: 50%;
+	}
+
+	#right {
+		right: -15%;
+		top: 50%;
+	}
+
+	#left > .slider-control::before,
+	#left > .slider-control::after,
+	#right > .slider-control::before,
+	#right > .slider-control::after {
+		@include mixings.menu-line;
+		background-color: colors.$gold;
+		content: "";
+		position: absolute;
+		height: 0.3rem;
+		width: 3rem;
+	}
+
+	#left > .slider-control::before {
+		transform: translateY(13px - (variables.$menu-line-separation))
+			rotate(-30deg);
+	}
+	#left > .slider-control::after {
+		transform: translateY(-13px + variables.$menu-line-separation) rotate(30deg);
+	}
+	#right > .slider-control::before {
+		transform: translateY(13px - (variables.$menu-line-separation))
+			rotate(30deg);
+	}
+	#right > .slider-control::after {
+		transform: translateY(-13px + variables.$menu-line-separation)
+			rotate(-30deg);
+	}
+	.slider-image {
+		position: absolute;
+		visibility: hidden;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+	.slider-image.visible {
+		visibility: visible;
+		opacity: 1;
+	}
+}

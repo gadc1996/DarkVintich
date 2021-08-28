@@ -1,8 +1,6 @@
-@use '../colors';
-@use '../mixings';
-
-$menu-line-rotation: 35px;
-$menu-line-separation: 25px;
+@use 'colors';
+@use 'mixings';
+@use 'variables';
 
 .menu-area {
 	position: absolute;
@@ -26,10 +24,10 @@ $menu-line-separation: 25px;
 }
 
 .burger-menu::before {
-	transform: translateY(-$menu-line-separation);
+	transform: translateY(-(variables.$menu-line-separation));
 }
 .burger-menu::after {
-	transform: translateY($menu-line-separation);
+	transform: translateY(variables.$menu-line-separation);
 }
 .burger-menu.open {
 	transform: translateX(-50px);

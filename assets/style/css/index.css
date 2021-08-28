@@ -1,27 +1,3 @@
-body {
-  position: relative;
-  box-sizing: border-box;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow-y: hidden;
-  padding: 0;
-  margin: 0;
-  border: 3rem solid black;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../images/index/background.jpg");
-}
-
 .nav-menu {
   position: absolute;
   background-color: transparent;
@@ -43,6 +19,7 @@ body {
 }
 
 .nav-menu.open {
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .nav-menu.open .nav-link {
@@ -53,24 +30,18 @@ body {
   text-decoration: underline;
 }
 
-.logo {
-  background-image: url("../../images/index/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30%;
-  height: 50%;
+.menu-area {
   position: absolute;
-  top: 3%;
-  left: 3%;
-}
-
-.burger-menu {
-  position: absolute;
-  top: 7%;
+  top: 2%;
   right: 2%;
   cursor: pointer;
+  height: 4rem;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-area .burger-menu {
   width: 6rem;
   height: 0.8rem;
   background: #fffa00;
@@ -114,6 +85,42 @@ body {
   background-color: gold;
 }
 
+body {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  border: 3rem solid black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../images/index/background.jpg");
+}
+
+.logo {
+  background-image: url("../../images/index/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
 footer {
   position: absolute;
   bottom: 25px;
@@ -125,6 +132,170 @@ footer .footer-text {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+.modal-toggle {
+  position: absolute;
+  top: 60%;
+  right: 0%;
+  width: 20%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: transparent;
+  background-color: white;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal-toggle:hover {
+  background-color: black;
+  color: gold;
+  cursor: pointer;
+}
+
+.modal-events {
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-events.visible {
+  visibility: visible;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  z-index: 1000;
+}
+
+.modal-close {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  background-color: gold;
+  cursor: pointer;
+}
+
+.modal-close::before {
+  transform: translateY(-25px);
+}
+
+.modal-close::after {
+  transform: translateY(25px);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close.visible {
+  display: block;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+.slider .control-area {
+  height: 6%;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.slider .control-area .slider-control {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  display: none;
+}
+.slider .control-area .slider-control.visible {
+  display: block;
+}
+.slider #left,
+.slider #right {
+  position: absolute;
+}
+.slider #left {
+  left: -15%;
+  top: 50%;
+}
+.slider #right {
+  right: -15%;
+  top: 50%;
+}
+.slider #left > .slider-control::before,
+.slider #left > .slider-control::after,
+.slider #right > .slider-control::before,
+.slider #right > .slider-control::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  background-color: gold;
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  width: 3rem;
+}
+.slider #left > .slider-control::before {
+  transform: translateY(-12px) rotate(-30deg);
+}
+.slider #left > .slider-control::after {
+  transform: translateY(12px) rotate(30deg);
+}
+.slider #right > .slider-control::before {
+  transform: translateY(-12px) rotate(30deg);
+}
+.slider #right > .slider-control::after {
+  transform: translateY(12px) rotate(-30deg);
+}
+.slider .slider-image {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.slider .slider-image.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
