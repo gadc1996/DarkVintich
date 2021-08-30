@@ -1,29 +1,32 @@
 .nav-menu {
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.7);
   right: 0%;
   top: 0%;
-  transition: all 0.5s ease-in-out;
 }
 .nav-menu .nav-link {
+  visibility: hidden;
   display: block;
   width: auto;
   margin: 3.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: transparent;
-  transform: translateX(2rem);
   transition: all 0.5s ease-in-out;
   font-size: 2.2rem;
   font-weight: 900;
+  color: gold;
 }
 
 .nav-menu.open {
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.7);
+  visibility: visible;
+  opacity: 1;
 }
 .nav-menu.open .nav-link {
-  color: gold;
+  visibility: visible;
   transform: translateX(0);
 }
 .nav-menu.open .nav-link:hover {
@@ -95,7 +98,7 @@ body {
   display: block;
   width: 100%;
   color: gold;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin: 8rem 0 4rem 0;
   text-align: center;
@@ -112,7 +115,6 @@ body {
   justify-content: center;
 }
 .catalogs .catalog {
-  z-index: -1;
   position: relative;
   width: 50%;
   background-color: gray;
@@ -129,24 +131,24 @@ body {
   width: 70%;
   text-align: center;
   transition: all 1s ease-in-out;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
 }
 .catalogs .catalog .catalog-info .catalog-title {
   color: gold;
   border-radius: 2px;
   font-size: 1.4rem;
   position: relative;
-  bottom: 1.5rem;
+  bottom: 1rem;
   display: inline-block;
   margin-bottom: 0;
 }
 .catalogs .catalog .category {
   opacity: 0%;
   position: relative;
-  transform: translateX(3rem);
-  transition: all 2s ease-in-out;
+  transition: all 0.5s linear;
 }
 .catalogs .catalog .category .category-title {
+  text-align: left;
   margin: 0 2rem;
   font-size: 1.5rem;
 }
@@ -156,6 +158,8 @@ body {
 .catalogs .catalog .category .category-items .item {
   list-style: none;
   text-align: left;
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
 }
 .catalogs #platillos {
   background-position: center;
@@ -170,7 +174,7 @@ body {
   background-image: url("../../images/local/bebidas.jpeg");
 }
 .catalogs .catalog.open .catalog-info {
-  height: 100%;
+  height: 90%;
   bottom: 0;
 }
 .catalogs .catalog.open .category {
@@ -180,6 +184,7 @@ body {
   font-weight: 500;
   transform: translateX(0);
   opacity: 100%;
+  transition: all 1s ease-in;
 }
 
 /*# sourceMappingURL=local.css.map */

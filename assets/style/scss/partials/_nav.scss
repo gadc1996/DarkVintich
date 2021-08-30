@@ -1,29 +1,32 @@
 @use 'colors';
 
 .nav-menu {
+	transition: all 0.5s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
 	position: absolute;
-	background-color: transparent;
+	background-color: colors.$gray-background;
 	right: 0%;
 	top: 0%;
-	transition: all 0.5s ease-in-out;
 	.nav-link {
+		visibility: hidden;
 		display: block;
 		width: auto;
 		margin: 3.5rem;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: transparent;
-		transform: translateX(2rem);
 		transition: all 0.5s ease-in-out;
 		font-size: 2.2rem;
 		font-weight: 900;
+		color: colors.$gold;
 	}
 }
 .nav-menu.open {
 	z-index: 10;
-	background-color: rgba($color: #000000, $alpha: 0.7);
+	visibility: visible;
+	opacity: 1;
 	.nav-link {
-		color: colors.$gold;
+		visibility: visible;
 		transform: translateX(0);
 	}
 	.nav-link:hover {

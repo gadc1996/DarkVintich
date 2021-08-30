@@ -8,7 +8,6 @@
 	display: flex;
 	justify-content: center;
 	.catalog {
-		z-index: -1;
 		position: relative;
 		width: 50%;
 		background-color: gray;
@@ -24,13 +23,13 @@
 			width: 70%;
 			text-align: center;
 			transition: all 1s ease-in-out;
-			padding-top: 1.5rem;
+			padding: 1.5rem 0;
 			.catalog-title {
 				color: colors.$gold;
 				border-radius: 2px;
 				font-size: 1.4rem;
 				position: relative;
-				bottom: 1.5rem;
+				bottom: 1rem;
 				display: inline-block;
 				margin-bottom: 0;
 			}
@@ -38,9 +37,9 @@
 		.category {
 			opacity: 0%;
 			position: relative;
-			transform: translateX(3rem);
-			transition: all 2s ease-in-out;
+			transition: all 0.5s linear;
 			.category-title {
+				text-align: left;
 				margin: 0 2rem;
 				font-size: 1.5rem;
 			}
@@ -49,6 +48,8 @@
 				.item {
 					list-style: none;
 					text-align: left;
+					font-size: 1.2rem;
+					margin: 0.3rem 0;
 				}
 			}
 		}
@@ -67,7 +68,7 @@
 	}
 	.catalog.open {
 		.catalog-info {
-			height: 100%;
+			height: 90%;
 			bottom: 0;
 		}
 		.category {
@@ -77,6 +78,7 @@
 			font-weight: 500;
 			transform: translateX(0);
 			opacity: 100%;
+			transition: all 1s ease-in;
 		}
 	}
 }

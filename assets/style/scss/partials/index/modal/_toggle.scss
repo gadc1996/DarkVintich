@@ -16,7 +16,8 @@
 }
 
 .modal-toggle:hover {
-	background-color: black;
+	border-radius: 2px;
+	background-color: colors.$gray-background;
 	color: colors.$gold;
 	cursor: pointer;
 }
