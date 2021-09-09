@@ -1,0 +1,106 @@
+.nav-menu {
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  right: 0%;
+  top: 0%;
+}
+.nav-menu .nav-link {
+  visibility: hidden;
+  display: block;
+  width: auto;
+  margin: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: gold;
+}
+
+.nav-menu.open {
+  z-index: 10;
+  visibility: visible;
+  opacity: 1;
+}
+.nav-menu.open .nav-link {
+  visibility: visible;
+  transform: translateX(0);
+}
+.nav-menu.open .nav-link:hover {
+  text-decoration: underline;
+}
+
+.menu-area {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  height: 4rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-area .burger-menu {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+}
+
+.burger-menu::before {
+  transform: translateY(-25px);
+}
+
+.burger-menu::after {
+  transform: translateY(25px);
+}
+
+.burger-menu.open {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.burger-menu.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: gold;
+}
+
+.burger-menu.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: gold;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 3rem;
+  margin: 0;
+  height: auto;
+}
+
+.menu-image {
+  width: 100%;
+  position: absolute;
+}
+
+/*# sourceMappingURL=menu.css.map */

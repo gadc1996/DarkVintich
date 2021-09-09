@@ -88,6 +88,12 @@
   background-color: gold;
 }
 
+@font-face {
+  font-family: "Alice-Regular";
+  src: local("../fonts/alice.regular.ttf") format("ttf");
+  font-style: italic;
+  font-weight: 100;
+}
 body {
   position: relative;
   box-sizing: border-box;
@@ -97,6 +103,7 @@ body {
   padding: 0;
   margin: 0;
   border: 3rem solid black;
+  font-family: "Alice-Regular";
 }
 
 body {
