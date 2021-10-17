@@ -17,7 +17,7 @@
   transition: all 0.5s ease-in-out;
   font-size: 2.2rem;
   font-weight: 900;
-  color: gold;
+  color: #b59a30;
 }
 
 .nav-menu.open {
@@ -80,12 +80,12 @@
 
 .burger-menu.open::before {
   transform: rotate(45deg) translate(35px, -35px);
-  background-color: gold;
+  background-color: #b59a30;
 }
 
 .burger-menu.open::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  background-color: gold;
+  background-color: #b59a30;
 }
 
 body {
@@ -113,7 +113,7 @@ body {
 .info .title {
   display: block;
   width: 100%;
-  color: gold;
+  color: #b59a30;
   font-size: 3rem;
   text-transform: uppercase;
   margin: 8rem 0 4rem 0;
@@ -134,10 +134,10 @@ body {
 }
 .info .email:hover,
 .info .phone:hover {
-  color: gold;
+  color: #b59a30;
 }
 .info .social .social-link {
-  color: gold;
+  color: #b59a30;
   font-size: 3rem;
 }
 .info .social .social-link .social-logo {

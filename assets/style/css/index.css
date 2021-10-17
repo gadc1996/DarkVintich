@@ -17,7 +17,7 @@
   transition: all 0.5s ease-in-out;
   font-size: 2.2rem;
   font-weight: 900;
-  color: gold;
+  color: #b59a30;
 }
 
 .nav-menu.open {
@@ -80,12 +80,12 @@
 
 .burger-menu.open::before {
   transform: rotate(45deg) translate(35px, -35px);
-  background-color: gold;
+  background-color: #b59a30;
 }
 
 .burger-menu.open::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  background-color: gold;
+  background-color: #b59a30;
 }
 
 @font-face {
@@ -138,7 +138,7 @@ footer {
 }
 footer .footer-text {
   font-size: 1rem;
-  color: gold;
+  color: #b59a30;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -162,7 +162,7 @@ footer .footer-text {
 .modal-toggle:hover {
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: gold;
+  color: #b59a30;
   cursor: pointer;
 }
 
@@ -205,7 +205,7 @@ footer .footer-text {
   transition: all 0.5s ease-in-out;
   content: "";
   position: absolute;
-  background-color: gold;
+  background-color: #b59a30;
   cursor: pointer;
 }
 
@@ -278,7 +278,7 @@ footer .footer-text {
   background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
   border-radius: 2px;
   transition: all 0.5s ease-in-out;
-  background-color: gold;
+  background-color: #b59a30;
   content: "";
   position: absolute;
   height: 0.3rem;
