@@ -91,9 +91,11 @@
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100vw;
   margin: 0;
+  overflow: hidden;
 }
 
 .map {
@@ -116,7 +118,7 @@ body {
   color: #b59a30;
   font-size: 3rem;
   text-transform: uppercase;
-  margin: 8rem 0 4rem 0;
+  margin: 4rem 0 2rem 0;
   text-align: center;
 }
 .info .info-text {
@@ -129,7 +131,7 @@ body {
   text-decoration: none;
   color: white;
   display: block;
-  margin: 3rem 0;
+  margin: 1rem 0;
   font-size: 2rem;
 }
 .info .email:hover,
