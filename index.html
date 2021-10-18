@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+					n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '382085123483015');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=382085123483015&ev=PageView&noscript=1" />
+		</noscript>
+
 		<meta charset="UTF-8">
 		<title>Dark Vintich</title>
 		<link rel="stylesheet" href="assets/style/css/index.css">
 
 	</head>
 	<body>
-	<div class="modal-events">
-		<div class="modal-close"></div>
-		<div class="slider">
-			<div id="left" class="control-area">
-				<div class="slider-control visible"></div>
+		<div class="modal-events">
+			<div class="modal-close"></div>
+			<div class="slider">
+				<div id="left" class="control-area">
+					<div class="slider-control visible"></div>
+				</div>
+				<div id="right" class="control-area">
+					<div class="slider-control visible"></div>
+				</div>
+				<img class="slider-image" src="assets/images/modal/01.jpeg" alt="">
+				<img class="slider-image" src="assets/images/modal/02.jpeg" alt="">
+				<img class="slider-image" src="assets/images/modal/03.jpeg" alt="">
+				<img class="slider-image" src="assets/images/modal/04.jpeg" alt="">
+				<img class="slider-image" src="assets/images/modal/05.jpeg" alt="">
 			</div>
-			<div id="right" class="control-area">
-				<div class="slider-control visible"></div>
-			</div>
-			<img class="slider-image" src="assets/images/modal/01.jpeg" alt="">
-			<img class="slider-image" src="assets/images/modal/02.jpeg" alt="">
-			<img class="slider-image" src="assets/images/modal/03.jpeg" alt="">
-			<img class="slider-image" src="assets/images/modal/04.jpeg" alt="">
-			<img class="slider-image" src="assets/images/modal/05.jpeg" alt="">
 		</div>
-	</div>
 		<div class="logo"></div>
 		<div class="menu-area">
 			<div class="burger-menu"></div>
