@@ -308,5 +308,9 @@ footer .footer-text {
   visibility: visible;
   opacity: 1;
 }
+.slider .slider-image {
+  height: 80%;
+  top: 10%;
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -2,4 +2,9 @@
 
 .slider {
 	@include mixings.slider;
+
+	.slider-image{
+		height: 80%;
+		top: 10%;
+	}
 }
