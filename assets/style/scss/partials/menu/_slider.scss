@@ -1,0 +1,16 @@
+@use '../mixings';
+
+.slider{
+	@include mixings.slider;
+	width: 100%;
+	#left{
+		left: -4%;
+	}
+
+	#right{
+		right: -4%;
+	}
+	.slider-image {
+		border-radius: 3px;
+	}
+}

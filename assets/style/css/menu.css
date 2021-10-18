@@ -95,7 +95,98 @@ body {
   min-width: 100vw;
   padding: 3rem;
   margin: 0;
-  height: auto;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+  width: 100%;
+}
+.slider .control-area {
+  height: 6%;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.slider .control-area .slider-control {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  display: none;
+}
+.slider .control-area .slider-control.visible {
+  display: block;
+}
+.slider #left,
+.slider #right {
+  position: absolute;
+}
+.slider #left {
+  left: -15%;
+  top: 50%;
+}
+.slider #right {
+  right: -15%;
+  top: 50%;
+}
+.slider #left > .slider-control::before,
+.slider #left > .slider-control::after,
+.slider #right > .slider-control::before,
+.slider #right > .slider-control::after {
+  width: 6rem;
+  height: 0.8rem;
+  background: #fffa00;
+  background: linear-gradient(90deg, #fffa00 0%, #fffa00 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 85%, #fffa00 85%);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  background-color: #b59a30;
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  width: 3rem;
+}
+.slider #left > .slider-control::before {
+  transform: translateY(-12px) rotate(-30deg);
+}
+.slider #left > .slider-control::after {
+  transform: translateY(12px) rotate(30deg);
+}
+.slider #right > .slider-control::before {
+  transform: translateY(-12px) rotate(30deg);
+}
+.slider #right > .slider-control::after {
+  transform: translateY(12px) rotate(-30deg);
+}
+.slider .slider-image {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.slider .slider-image.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.slider #left {
+  left: -4%;
+}
+.slider #right {
+  right: -4%;
+}
+.slider .slider-image {
+  border-radius: 3px;
 }
 
 .menu-image {
